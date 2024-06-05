@@ -1,0 +1,389 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*{padding: 0px;margin: 0px;box-sizing: border-box;}
+a{text-decoration: none; color:black;}
+li{list-style: none;}
+
+#nav{
+  position: fixed;
+  z-index: 1;
+  background: rgb(43, 43, 43);
+  display: flex;
+  box-shadow: 0px 0px 15px;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  padding: 40px 60px; 
+  margin-top: -20px;
+
+}
+
+#nav .menus 
+{
+  width: 55%;
+  transition: 0.4s all ease;
+}
+#nav .menus ul  
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#nav .menus ul  li a 
+{
+  color:white;
+  font-size: 18px;
+  font-weight: 300;
+}
+#nav .menus ul  li a:hover
+{
+  color:rgb(218, 210, 52);
+  transition: 0.7s all ease;
+}
+#nav #openClose
+{
+  color:white;
+  font-size: 18px;
+  font-weight: 600;
+  display: none;
+}
+#nav .logo
+{
+  padding-left: 20px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 25px;
+  color:white;
+}
+@media (max-width:780px)
+{
+  #nav{
+    height: 80px;
+    padding: 20px 0px 0px 0px;
+    /* position: sticky; */
+  }
+  #nav {
+    box-shadow: 0px 0px 15px;
+    padding: 26px 10px;
+}
+  #nav .menus 
+  {
+    width: 50%;
+    background: rgb(37, 57, 61);
+    margin-left:0% ;
+    height: 100vh;
+    margin-top: 40px;
+    position: absolute;
+    margin-left: -1000px;
+  }
+  #nav .menus ul  
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50vw;
+  padding: 20px 0px 0px 40px;
+}
+#nav .menus ul li 
+{
+  height: 50px;
+}
+#nav .menus ul li a
+{
+  font-weight: 100;
+}
+#nav .logo
+{
+  padding-left: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 19px;
+}
+#nav #openClose
+{
+  color:white;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  /* height: 40px; */
+  padding-right: 20px;
+  cursor:pointer;
+}
+}
+
+
+#newsItems
+{
+  padding: 40px 80px;
+  height: auto;
+  padding-top: 0px;
+}
+#newsItems .main{
+
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: auto;
+}
+#newsItems .main .item{
+  padding: 5px 10px 5px 10px;
+  background: hsla(55, 100%, 98%, 0.642);
+  max-width: 30%;
+  margin: 15px 0px 15px 0px;
+  height:auto;
+  min-width: 26%;
+  border-radius: 5px;
+  box-shadow:
+   0px 0px 17px rgb(203, 203, 203);
+}
+#newsItems .main .item .newsimg 
+{
+  width: 100%;
+}
+#newsItems .main .item img
+{
+  height: 220px;
+  width: 100%;
+}
+#newsItems .main .item .detail .title 
+{
+ margin-left: 5px;
+ font-weight: 500;
+ font-size: 20px;
+ 
+}
+#newsItems .main .item .detail p 
+{
+ font-weight: 200;
+ font-size: 18px;
+ margin-top: 5px;
+ min-height: 100px;
+ max-height: auto;
+}
+#newsItems .main .item .detail button 
+{
+  padding: 10px 14px;
+  background: none;
+  font-weight: 400;
+  width: 100%;
+  border:1px solid transparent;
+  background-color: rgb(32, 32, 32);
+  color: rgb(156, 156, 156);
+  font-size: 17px;
+  margin: 15px 0px;
+  margin-bottom: 5px;
+  box-shadow:
+  0px 0px 9px rgb(255, 255, 255);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+#newsItems .main .item .detail button:hover
+{
+    background: hsla(0, 0%, 0%, 0.642);
+    color:black;
+    font-weight: 300;
+}
+#headingtitle
+{
+  padding-top: 100px;
+  margin: 20px;
+  text-align: center;
+}
+@media(max-width:1080px)
+{
+  #newsItems {
+    padding: 40px 30px;
+}
+#nav{
+  padding: 30px 10px;
+}
+}
+@media(max-width:980px)
+{
+  #newsItems .main .item {
+    max-width: 46%;
+    min-width: 36%; 
+}
+#nav .menus ul  li a {
+  font-size: 16px;
+}
+#nav {
+  box-shadow: 0px 0px 15px;
+  
+}
+#newsItems {
+  padding: 20px 30px;
+}
+}
+@media(max-width:690px)
+{
+  #newsItems .main {
+    justify-content: space-around;
+}
+#headingtitle {
+  padding-top: 68px;
+}
+#nav .menus 
+{
+  width: 100%;
+}
+  #newsItems .main .item {
+    max-width: 72%;
+    min-width: 36%;
+}
+#nav {
+  height: 66px;
+}
+}
+@media(max-width:550px)
+{
+  #newsItems .main .item {
+    max-width: 82%;
+    min-width: 36%;
+}
+#nav #openClose {
+  
+  font-size: 14px;
+  font-weight: 400;
+ 
+}
+}
+@media(max-width:480px)
+{
+  #newsItems .main .item {
+    max-width: 100%;
+    min-width: 36%;
+}
+#nav{
+  padding: 20px 0px;
+}
+#headingtitle {
+  padding-top: 54px;
+}
+#newsItems {
+  padding: 10px 30px;
+}
+#nav .menus {
+  width: 110%;
+  padding-left: 10px;
+  margin-top: 35px;
+}
+}
+@media(max-width:330px)
+{
+  #newsItems .main .item {
+    max-width: 100%;
+    min-width: 36%;
+}
+
+#nav .logo {
+  font-weight: 600;
+  font-size: 17px;
+}
+#nav #openClose {
+  
+  font-size: 14px;
+  font-weight: 400;
+ 
+}
+#newsItems {
+  padding: 40px 10px;
+}
+}
+/* next previous button*/
+.paginate
+{
+  width: 100%;
+  padding: 20 80px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+.paginate button {
+  padding: 10px 14px;
+  background: none;
+  font-weight: 400;
+  width: 120px;
+  border:1px solid transparent;
+  background-color: black;
+  color: white;
+  font-size: 17px;
+  box-shadow:
+  0px 0px 8px rgb(6, 6, 6);
+  border-radius: 9%;
+  cursor: pointer;
+}
+.paginate button:disabled {
+  padding: 10px 14px;
+  width: 120px;
+  border:1px solid transparent;
+  background-color: rgb(55, 55, 55);
+  color: white;
+  font-size: 17px;
+  cursor: none;
+  box-shadow:none;
+}
+.paginate button:hover
+{
+  box-shadow:
+  0px 0px 22px rgb(105, 105, 105);
+}
+.paginate button:disabled:hover
+{
+  box-shadow:none;
+}
+
+
+/* footer */
+footer {
+  background-color: rgb(32, 32, 32);
+  text-align: center;
+  color:rgb(181, 181, 181);
+  font-size: 17px;
+  padding: 30px;  
+  font-size: 17px;
+  padding:16px;
+  font-weight: 100;
+  margin-top: 10px;
+  /* box-shadow: 0px 0px 3px; */
+}
